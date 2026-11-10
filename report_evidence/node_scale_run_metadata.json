@@ -1,0 +1,36 @@
+{
+  "node_counts": [
+    2,
+    5,
+    10,
+    20,
+    50,
+    100,
+    245,
+    500,
+    685,
+    1000
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "steps": 10,
+  "topology": "random",
+  "density": "high",
+  "traffic": "mixed",
+  "dynamic_conditions": true,
+  "source_rule": "0",
+  "destination_rule": "min(50,node_count-1)",
+  "baseline": "dijkstra_dynamic",
+  "rl": "ppo_residual",
+  "checkpoint_loaded": true,
+  "checkpoint_trained": true,
+  "checkpoint_path": "C:\\Users\\Madhuri\\Downloads\\NETRA_reviewed\\NETRA_reviewed\\backend\\app\\core\\rl\\weights\\candidate_ppo_residual.pt",
+  "successful_method_runs": 100,
+  "expected_method_runs": 100,
+  "errors": []
+}

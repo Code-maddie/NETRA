@@ -1,0 +1,99 @@
+{
+  "config": {
+    "node_count": 245,
+    "topology_type": "random",
+    "density": "high",
+    "source": 1,
+    "destination": 50,
+    "traffic_pattern": "mixed",
+    "dynamic_conditions": true,
+    "steps": 30,
+    "seed": 42
+  },
+  "topology": {
+    "nodes": 245,
+    "links": 2352,
+    "metadata": {
+      "node_count": 245,
+      "link_count": 2352,
+      "topology_type": "random",
+      "density": "high",
+      "seed": 42,
+      "is_connected": true,
+      "is_single_node": false,
+      "connected_components": 1,
+      "average_degree": 19.2
+    }
+  },
+  "topology_generation_seconds": 0.166594099951908,
+  "traditional_runtime_seconds": 22.12848489987664,
+  "rl_runtime_seconds": 13.571967700030655,
+  "total_runtime_seconds": 36.07414050004445,
+  "peak_traced_memory_bytes": 108132578,
+  "traditional": {
+    "path": [
+      1,
+      57,
+      19,
+      50
+    ],
+    "metrics": {
+      "packets_offered": 107122,
+      "packets_delivered": 91189,
+      "packets_dropped": 15933,
+      "delivery_success_rate_pct": 85.13,
+      "packet_loss_pct": 14.87,
+      "throughput_pps": 6079.27,
+      "throughput_mbps": 72.951,
+      "avg_latency_ms": 20.6,
+      "p95_latency_ms": 22.56,
+      "min_latency_ms": 15.67,
+      "max_latency_ms": 22.58,
+      "avg_link_utilization_pct": 7.19,
+      "max_link_utilization_pct": 61.5,
+      "congestion_frequency_pct": 0.0,
+      "routing_computation_time_ms": 24.8937,
+      "rl_reward": null
+    },
+    "event_types": [
+      "LINK_FAILED",
+      "LINK_RECOVERED",
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED",
+      "TRAFFIC_BURST"
+    ]
+  },
+  "rl": {
+    "path": [
+      1,
+      37,
+      50
+    ],
+    "metrics": {
+      "packets_offered": 107122,
+      "packets_delivered": 107122,
+      "packets_dropped": 0,
+      "delivery_success_rate_pct": 100.0,
+      "packet_loss_pct": 0.0,
+      "throughput_pps": 7141.47,
+      "throughput_mbps": 85.698,
+      "avg_latency_ms": 27.71,
+      "p95_latency_ms": 32.58,
+      "min_latency_ms": 24.31,
+      "max_latency_ms": 32.77,
+      "avg_link_utilization_pct": 7.12,
+      "max_link_utilization_pct": 42.2,
+      "congestion_frequency_pct": 0.0,
+      "routing_computation_time_ms": 63.9793,
+      "rl_reward": null
+    },
+    "event_types": [
+      "LINK_FAILED",
+      "LINK_RECOVERED",
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED",
+      "TRAFFIC_BURST"
+    ]
+  },
+  "simulation_completed": true
+}

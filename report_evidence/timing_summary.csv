@@ -1,0 +1,4 @@
+scenario,training_seconds,training_episodes,best_val_score_pct,traditional_decision_mean_ms,traditional_decision_sample_sd_ms,rl_decision_mean_ms,rl_decision_sample_sd_ms,seeds
+"Small 5-node custom demo, static, constant traffic",9.528111699968576,27,2.74,0.07432,0.013404551465826824,1.02888,0.26563022606623665,42;43;44;45;46
+"Medium 30-node random, moderate constant traffic, static",11.331776200095192,27,1.7,0.30978,0.046463394193709096,1.69164,0.2711180886624867,42;43;44;45;46
+"Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",11.365235599922016,27,18.61,6.74484,6.173653502829584,16.74548,21.84342004968544,42;43;44;45;46

@@ -1,0 +1,669 @@
+{
+  "negative_node_count": {
+    "http_status": 400,
+    "body": {
+      "detail": {
+        "errors": [
+          "Node count -1 is invalid. Minimum allowed is 1 node."
+        ],
+        "warnings": []
+      }
+    }
+  },
+  "unknown_topology": {
+    "http_status": 400,
+    "body": {
+      "detail": {
+        "errors": [
+          "Invalid topology 'unknown'. Supported topologies: ['random', 'scale_free', 'mesh', 'star', 'ring', 'line', 'grid']"
+        ],
+        "warnings": []
+      }
+    }
+  },
+  "invalid_density": {
+    "http_status": 200,
+    "body": {
+      "success": true,
+      "data": {
+        "metadata": {
+          "node_count": 10,
+          "link_count": 24,
+          "topology_type": "random",
+          "density": "tiny",
+          "seed": 42,
+          "is_connected": true,
+          "is_single_node": false,
+          "connected_components": 1,
+          "average_degree": 4.8
+        },
+        "nodes": [
+          {
+            "id": 0,
+            "label": "Node 0",
+            "x": 531.6,
+            "y": 500.13,
+            "degree": 9
+          },
+          {
+            "id": 1,
+            "label": "Node 1",
+            "x": 386.88,
+            "y": 920.0,
+            "degree": 3
+          },
+          {
+            "id": 2,
+            "label": "Node 2",
+            "x": 719.49,
+            "y": 107.78,
+            "degree": 3
+          },
+          {
+            "id": 3,
+            "label": "Node 3",
+            "x": 261.97,
+            "y": 491.78,
+            "degree": 5
+          },
+          {
+            "id": 4,
+            "label": "Node 4",
+            "x": 863.22,
+            "y": 644.51,
+            "degree": 3
+          },
+          {
+            "id": 5,
+            "label": "Node 5",
+            "x": 508.42,
+            "y": 689.28,
+            "degree": 6
+          },
+          {
+            "id": 6,
+            "label": "Node 6",
+            "x": 498.37,
+            "y": 290.72,
+            "degree": 6
+          },
+          {
+            "id": 7,
+            "label": "Node 7",
+            "x": 211.57,
+            "y": 694.37,
+            "degree": 5
+          },
+          {
+            "id": 8,
+            "label": "Node 8",
+            "x": 176.3,
+            "y": 326.6,
+            "degree": 4
+          },
+          {
+            "id": 9,
+            "label": "Node 9",
+            "x": 842.16,
+            "y": 334.82,
+            "degree": 4
+          }
+        ],
+        "links": [
+          {
+            "id": "0-1",
+            "source": 0,
+            "target": 1,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 12.41,
+            "current_delay_ms": 12.41,
+            "utilization": 0.198,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 12.41,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-2",
+            "source": 0,
+            "target": 2,
+            "capacity_mbps": 250.0,
+            "base_delay_ms": 6.3,
+            "current_delay_ms": 6.3,
+            "utilization": 0.197,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 6.3,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-3",
+            "source": 0,
+            "target": 3,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 12.99,
+            "current_delay_ms": 12.99,
+            "utilization": 0.168,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 12.99,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-4",
+            "source": 0,
+            "target": 4,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 2.99,
+            "current_delay_ms": 2.99,
+            "utilization": 0.094,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 2.99,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-5",
+            "source": 0,
+            "target": 5,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 10.33,
+            "current_delay_ms": 10.33,
+            "utilization": 0.162,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 10.33,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-6",
+            "source": 0,
+            "target": 6,
+            "capacity_mbps": 1000.0,
+            "base_delay_ms": 13.6,
+            "current_delay_ms": 13.6,
+            "utilization": 0.094,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 13.6,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-7",
+            "source": 0,
+            "target": 7,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 11.63,
+            "current_delay_ms": 11.63,
+            "utilization": 0.202,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 11.63,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-8",
+            "source": 0,
+            "target": 8,
+            "capacity_mbps": 1000.0,
+            "base_delay_ms": 4.97,
+            "current_delay_ms": 4.97,
+            "utilization": 0.118,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 4.97,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "0-9",
+            "source": 0,
+            "target": 9,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 4.91,
+            "current_delay_ms": 4.91,
+            "utilization": 0.07,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 4.91,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "1-5",
+            "source": 1,
+            "target": 5,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 8.39,
+            "current_delay_ms": 8.39,
+            "utilization": 0.219,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 8.39,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "1-7",
+            "source": 1,
+            "target": 7,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 11.86,
+            "current_delay_ms": 11.86,
+            "utilization": 0.196,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 11.86,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "2-6",
+            "source": 2,
+            "target": 6,
+            "capacity_mbps": 1000.0,
+            "base_delay_ms": 10.81,
+            "current_delay_ms": 10.81,
+            "utilization": 0.066,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 10.81,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "2-9",
+            "source": 2,
+            "target": 9,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 7.04,
+            "current_delay_ms": 7.04,
+            "utilization": 0.165,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 7.04,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "3-5",
+            "source": 3,
+            "target": 5,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 13.42,
+            "current_delay_ms": 13.42,
+            "utilization": 0.182,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 13.42,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "3-6",
+            "source": 3,
+            "target": 6,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 14.48,
+            "current_delay_ms": 14.48,
+            "utilization": 0.221,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 14.48,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "3-7",
+            "source": 3,
+            "target": 7,
+            "capacity_mbps": 1000.0,
+            "base_delay_ms": 15.93,
+            "current_delay_ms": 15.93,
+            "utilization": 0.106,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 15.93,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "3-8",
+            "source": 3,
+            "target": 8,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 12.35,
+            "current_delay_ms": 12.35,
+            "utilization": 0.083,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 12.35,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "4-5",
+            "source": 4,
+            "target": 5,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 8.01,
+            "current_delay_ms": 8.01,
+            "utilization": 0.19,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 8.01,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "4-9",
+            "source": 4,
+            "target": 9,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 13.09,
+            "current_delay_ms": 13.09,
+            "utilization": 0.172,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 13.09,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "5-6",
+            "source": 5,
+            "target": 6,
+            "capacity_mbps": 250.0,
+            "base_delay_ms": 5.15,
+            "current_delay_ms": 5.15,
+            "utilization": 0.083,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 5.15,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "5-7",
+            "source": 5,
+            "target": 7,
+            "capacity_mbps": 250.0,
+            "base_delay_ms": 8.38,
+            "current_delay_ms": 8.38,
+            "utilization": 0.187,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 8.38,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "6-8",
+            "source": 6,
+            "target": 8,
+            "capacity_mbps": 100.0,
+            "base_delay_ms": 15.56,
+            "current_delay_ms": 15.56,
+            "utilization": 0.096,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 15.56,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "6-9",
+            "source": 6,
+            "target": 9,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 3.0,
+            "current_delay_ms": 3.0,
+            "utilization": 0.13,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 3.0,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          },
+          {
+            "id": "7-8",
+            "source": 7,
+            "target": 8,
+            "capacity_mbps": 500.0,
+            "base_delay_ms": 3.53,
+            "current_delay_ms": 3.53,
+            "utilization": 0.093,
+            "status": "active",
+            "loss_prob": 0.001,
+            "weight": 3.53,
+            "queue_occupancy": 0,
+            "packets_transmitted": 0,
+            "packets_dropped": 0
+          }
+        ]
+      },
+      "warnings": [
+        "Unknown density 'tiny'. Defaulting to 'medium'."
+      ]
+    }
+  },
+  "same_endpoints": {
+    "http_status": 400,
+    "body": {
+      "detail": {
+        "errors": [
+          "Source and destination must be distinct endpoints. Both set to 2."
+        ]
+      }
+    }
+  },
+  "source_out_of_range": {
+    "http_status": 400,
+    "body": {
+      "detail": {
+        "errors": [
+          "Source node 5 does not exist in the generated network."
+        ]
+      }
+    }
+  },
+  "destination_out_of_range": {
+    "http_status": 400,
+    "body": {
+      "detail": {
+        "errors": [
+          "Destination node 5 does not exist in the generated network."
+        ]
+      }
+    }
+  },
+  "unreachable_pair": {
+    "http_status": 200,
+    "body": {
+      "valid": false,
+      "is_single_node": false,
+      "errors": [
+        "Destination node 3 is unreachable from source node 0. The network contains 2 disconnected components."
+      ],
+      "warnings": [],
+      "details": {
+        "path_exists": false,
+        "is_connected": false,
+        "connected_components": 2,
+        "node_count": 4,
+        "active_link_count": 2
+      }
+    }
+  },
+  "topology_245_seed_42": {
+    "node_count": 245,
+    "link_count": 2352,
+    "metadata": {
+      "node_count": 245,
+      "link_count": 2352,
+      "topology_type": "random",
+      "density": "high",
+      "seed": 42,
+      "is_connected": true,
+      "is_single_node": false,
+      "connected_components": 1,
+      "average_degree": 19.2
+    }
+  },
+  "dynamic_conditions_run": {
+    "failure_schedule": {
+      "3": {
+        "action": "fail",
+        "link_id": "1-5"
+      },
+      "7": {
+        "action": "recover",
+        "link_id": "1-5"
+      }
+    },
+    "event_types": [
+      "LINK_FAILED",
+      "LINK_RECOVERED",
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED",
+      "TRAFFIC_BURST"
+    ],
+    "dynamic_events": [
+      {
+        "step": 3,
+        "timestamp_ms": 1794249797465.2,
+        "type": "LINK_FAILED",
+        "details": {
+          "link_id": "1-5",
+          "source": 1,
+          "target": 5,
+          "reason": "Dynamic link fault injected"
+        }
+      },
+      {
+        "step": 7,
+        "timestamp_ms": 1794249797535.4,
+        "type": "LINK_RECOVERED",
+        "details": {
+          "link_id": "1-5",
+          "source": 1,
+          "target": 5
+        }
+      }
+    ],
+    "simulation_completed": true,
+    "steps": 12,
+    "utilization_snapshots": 12
+  },
+  "small_5_static_first_run": {
+    "node_count": 5,
+    "link_count": 5,
+    "traditional_path": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "rl_path": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "traditional_events": [
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED"
+    ],
+    "rl_events": [
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED"
+    ],
+    "pair_wall_seconds": 0.21368209994398057,
+    "peak_traced_memory_bytes": null
+  },
+  "medium_30_static_first_run": {
+    "node_count": 30,
+    "link_count": 104,
+    "traditional_path": [
+      1,
+      5,
+      20
+    ],
+    "rl_path": [
+      1,
+      5,
+      20
+    ],
+    "traditional_events": [
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED"
+    ],
+    "rl_events": [
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED"
+    ],
+    "pair_wall_seconds": 0.18178179999813437,
+    "peak_traced_memory_bytes": null
+  },
+  "large_245_dynamic_first_run": {
+    "node_count": 245,
+    "link_count": 2352,
+    "traditional_path": [
+      1,
+      57,
+      19,
+      50
+    ],
+    "rl_path": [
+      1,
+      37,
+      50
+    ],
+    "traditional_events": [
+      "LINK_FAILED",
+      "LINK_RECOVERED",
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED",
+      "TRAFFIC_BURST"
+    ],
+    "rl_events": [
+      "LINK_FAILED",
+      "LINK_RECOVERED",
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED",
+      "TRAFFIC_BURST"
+    ],
+    "pair_wall_seconds": 7.2936271000653505,
+    "peak_traced_memory_bytes": 18392682
+  }
+}

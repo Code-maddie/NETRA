@@ -1,0 +1,250 @@
+{
+  "invalid_config_validation": [
+    {
+      "case": {
+        "node_count": -1,
+        "topology_type": "random",
+        "density": "medium"
+      },
+      "valid": false,
+      "errors": [
+        "Node count -1 is invalid. Minimum allowed is 1 node."
+      ],
+      "warnings": []
+    },
+    {
+      "case": {
+        "node_count": 0,
+        "topology_type": "random",
+        "density": "medium"
+      },
+      "valid": false,
+      "errors": [
+        "Node count 0 is invalid. Minimum allowed is 1 node."
+      ],
+      "warnings": []
+    },
+    {
+      "case": {
+        "node_count": 25,
+        "topology_type": "unknown",
+        "density": "medium"
+      },
+      "valid": false,
+      "errors": [
+        "Invalid topology 'unknown'. Supported topologies: ['random', 'scale_free', 'mesh', 'star', 'ring', 'line', 'grid']"
+      ],
+      "warnings": []
+    },
+    {
+      "case": {
+        "node_count": 25,
+        "topology_type": "random",
+        "density": "tiny"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "Unknown density 'tiny'. Defaulting to 'medium'."
+      ]
+    },
+    {
+      "case": {
+        "node_count": 25.5,
+        "topology_type": "random",
+        "density": "medium"
+      },
+      "valid": false,
+      "errors": [
+        "Node count must be an integer. Received: float"
+      ],
+      "warnings": []
+    }
+  ],
+  "topology_generation": {
+    "node_count": 245,
+    "link_count": 2352,
+    "metadata": {
+      "node_count": 245,
+      "link_count": 2352,
+      "topology_type": "random",
+      "density": "high",
+      "seed": 42,
+      "is_connected": true,
+      "is_single_node": false,
+      "connected_components": 1,
+      "average_degree": 19.2
+    }
+  },
+  "reachability": {
+    "valid": false,
+    "is_single_node": false,
+    "errors": [
+      "Destination node 3 is unreachable from source node 0. The network contains 2 disconnected components."
+    ],
+    "warnings": [],
+    "details": {
+      "path_exists": false,
+      "is_connected": false,
+      "connected_components": 2,
+      "node_count": 4,
+      "active_link_count": 2
+    }
+  },
+  "dynamic_conditions": {
+    "failure_schedule": {
+      "3": {
+        "action": "fail",
+        "link_id": "19-50"
+      },
+      "6": {
+        "action": "recover",
+        "link_id": "19-50"
+      }
+    },
+    "event_types": [
+      "LINK_FAILED",
+      "LINK_RECOVERED",
+      "SIMULATION_COMPLETED",
+      "SIMULATION_INITIALIZED",
+      "TRAFFIC_BURST"
+    ],
+    "failed_links": [
+      "19-50"
+    ]
+  },
+  "baseline_vs_rl": {
+    "traditional": {
+      "packets_offered": 47473,
+      "packets_delivered": 44953,
+      "packets_dropped": 2520,
+      "delivery_success_rate_pct": 94.69,
+      "packet_loss_pct": 5.31,
+      "throughput_pps": 8990.6,
+      "throughput_mbps": 107.887,
+      "avg_latency_ms": 8.73,
+      "p95_latency_ms": 12.61,
+      "min_latency_ms": 3.95,
+      "max_latency_ms": 12.61,
+      "avg_link_utilization_pct": 11.85,
+      "max_link_utilization_pct": 53.0,
+      "congestion_frequency_pct": 0.0,
+      "routing_computation_time_ms": 0.2955,
+      "rl_reward": null
+    },
+    "rl": {
+      "packets_offered": 47473,
+      "packets_delivered": 44953,
+      "packets_dropped": 2520,
+      "delivery_success_rate_pct": 94.69,
+      "packet_loss_pct": 5.31,
+      "throughput_pps": 8990.6,
+      "throughput_mbps": 107.887,
+      "avg_latency_ms": 11.27,
+      "p95_latency_ms": 17.96,
+      "min_latency_ms": 3.95,
+      "max_latency_ms": 17.96,
+      "avg_link_utilization_pct": 11.78,
+      "max_link_utilization_pct": 53.0,
+      "congestion_frequency_pct": 0.0,
+      "routing_computation_time_ms": 1.4021,
+      "rl_reward": null
+    },
+    "comparison": {
+      "winner": "Traditional Routing (Dijkstra)",
+      "verdict": "Traditional routing scored better on the measured metrics in this simulated run. This does not prove it always wins.",
+      "reasons": [
+        "RL had 29.1% higher average latency than traditional routing.",
+        "RL routing computation took longer (1.4021 ms vs 0.2955 ms for the traditional method)."
+      ],
+      "latency_comparable": true,
+      "improvements": {
+        "latency_improvement_pct": -29.1,
+        "packet_loss_reduction_pct": 0.0,
+        "packet_loss_change_percentage_points": 0.0,
+        "throughput_improvement_pct": 0.0,
+        "computational_overhead_difference_pct": -374.48
+      },
+      "side_by_side": {
+        "traditional": {
+          "algorithm": "dijkstra_dynamic",
+          "path": [
+            0,
+            19
+          ],
+          "hops": 1,
+          "metrics": {
+            "packets_offered": 47473,
+            "packets_delivered": 44953,
+            "packets_dropped": 2520,
+            "delivery_success_rate_pct": 94.69,
+            "packet_loss_pct": 5.31,
+            "throughput_pps": 8990.6,
+            "throughput_mbps": 107.887,
+            "avg_latency_ms": 8.73,
+            "p95_latency_ms": 12.61,
+            "min_latency_ms": 3.95,
+            "max_latency_ms": 12.61,
+            "avg_link_utilization_pct": 11.85,
+            "max_link_utilization_pct": 53.0,
+            "congestion_frequency_pct": 0.0,
+            "routing_computation_time_ms": 0.2955,
+            "rl_reward": null
+          }
+        },
+        "rl": {
+          "algorithm": "PPO (Proximal Policy Optimization)",
+          "path": [
+            0,
+            19
+          ],
+          "hops": 1,
+          "reward": null,
+          "metrics": {
+            "packets_offered": 47473,
+            "packets_delivered": 44953,
+            "packets_dropped": 2520,
+            "delivery_success_rate_pct": 94.69,
+            "packet_loss_pct": 5.31,
+            "throughput_pps": 8990.6,
+            "throughput_mbps": 107.887,
+            "avg_latency_ms": 11.27,
+            "p95_latency_ms": 17.96,
+            "min_latency_ms": 3.95,
+            "max_latency_ms": 17.96,
+            "avg_link_utilization_pct": 11.78,
+            "max_link_utilization_pct": 53.0,
+            "congestion_frequency_pct": 0.0,
+            "routing_computation_time_ms": 1.4021,
+            "rl_reward": null
+          }
+        }
+      }
+    }
+  },
+  "large_scale_run": {
+    "runtime_seconds": 3.1273,
+    "peak_traced_memory_bytes": 11288515,
+    "current_traced_memory_bytes": 10122775,
+    "routing_method": "ppo_residual",
+    "metrics": {
+      "packets_offered": 29672,
+      "packets_delivered": 29672,
+      "packets_dropped": 0,
+      "delivery_success_rate_pct": 100.0,
+      "packet_loss_pct": 0.0,
+      "throughput_pps": 5934.4,
+      "throughput_mbps": 71.213,
+      "avg_latency_ms": 26.54,
+      "p95_latency_ms": 31.14,
+      "min_latency_ms": 24.31,
+      "max_latency_ms": 31.14,
+      "avg_link_utilization_pct": 10.64,
+      "max_link_utilization_pct": 37.9,
+      "congestion_frequency_pct": 0.0,
+      "routing_computation_time_ms": 42.6626,
+      "rl_reward": null
+    },
+    "simulation_completed": true
+  }
+}

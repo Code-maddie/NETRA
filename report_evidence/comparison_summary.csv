@@ -1,0 +1,13 @@
+scenario,metric,traditional_mean,traditional_sample_sd,rl_mean,rl_sample_sd,difference_pct_rl_minus_trad,traditional_n,rl_n,seeds_used
+"Small 5-node custom demo, static, constant traffic",Latency (ms),12.24,0.0,12.63,0.0,3.1862745098039262,5,5,42;43;44;45;46
+"Small 5-node custom demo, static, constant traffic",Packet loss (%),0.0,0.0,0.0,0.0,,5,5,42;43;44;45;46
+"Small 5-node custom demo, static, constant traffic",Throughput (Mbps),59.9982,0.011122050170720751,59.9982,0.011122050170720751,0.0,5,5,42;43;44;45;46
+"Small 5-node custom demo, static, constant traffic",Mean link utilization (%),10.988,0.004472135954999484,5.18,0.0,-52.85766290498726,5,5,42;43;44;45;46
+"Medium 30-node random, moderate constant traffic, static",Latency (ms),19.346,2.697708286675934,23.344,7.2526843306461375,20.665770701953896,5,5,42;43;44;45;46
+"Medium 30-node random, moderate constant traffic, static",Packet loss (%),0.0,0.0,0.0,0.0,,5,5,42;43;44;45;46
+"Medium 30-node random, moderate constant traffic, static",Throughput (Mbps),59.9982,0.011122050170720751,59.9982,0.011122050170720751,0.0,5,5,42;43;44;45;46
+"Medium 30-node random, moderate constant traffic, static",Mean link utilization (%),10.348,0.3894483277663415,10.246,0.4248882205945468,-0.9856977193660641,5,5,42;43;44;45;46
+"Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",Latency (ms),16.62,2.7430001822821666,27.582,9.195097606877265,65.95667870036101,5,5,42;43;44;45;46
+"Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",Packet loss (%),14.876000000000001,8.212461872057611,8.25,11.848784747812747,-44.541543425652065,5,5,42;43;44;45;46
+"Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",Throughput (Mbps),85.5556,21.09316224040388,91.426,18.78537919500163,6.861502929089392,5,5,42;43;44;45;46
+"Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",Mean link utilization (%),10.734,0.05128352561983267,10.702,0.04764451699828624,-0.2981181293087388,5,5,42;43;44;45;46

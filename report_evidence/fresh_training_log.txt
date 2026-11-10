@@ -1,0 +1,42 @@
+[small_5_static] training_seconds=9.528111699968576
+[DAgger] Beginning 2 DAgger iterations (3 episodes each)...
+[DAgger 1/2] Samples: 144, Cross-Entropy Loss: 0.1747
+[DAgger 2/2] Samples: 288, Cross-Entropy Loss: 0.2520
+[PPO] Initial BC policy relative cost vs CADJ on VAL: +7.58%
+[PPO 1/7] Mean Reward vs CADJ: -0.285, VAL relative cost: +4.70%
+[PPO 2/7] Mean Reward vs CADJ: -0.102, VAL relative cost: +3.55%
+[PPO 3/7] Mean Reward vs CADJ: -0.082, VAL relative cost: +3.22%
+[PPO 4/7] Mean Reward vs CADJ: -0.219, VAL relative cost: +3.22%
+[PPO 5/7] Mean Reward vs CADJ: -0.141, VAL relative cost: +3.39%
+[PPO 6/7] Mean Reward vs CADJ: -0.241, VAL relative cost: +2.96%
+[PPO 7/7] Mean Reward vs CADJ: -0.103, VAL relative cost: +2.74%
+[Training Complete] Selected checkpoint best VAL rel.cost vs CADJ: +2.74%. Saved to ..\report_evidence\trained_small_5_static.pt.
+{"success": true, "dagger_episodes": 6, "ppo_episodes": 21, "total_episodes": 27, "best_val_score_pct": 2.74, "weights_file": "..\\report_evidence\\trained_small_5_static.pt"}
+[medium_30_static] training_seconds=11.331776200095192
+[DAgger] Beginning 2 DAgger iterations (3 episodes each)...
+[DAgger 1/2] Samples: 144, Cross-Entropy Loss: 0.0542
+[DAgger 2/2] Samples: 288, Cross-Entropy Loss: 0.1853
+[PPO] Initial BC policy relative cost vs CADJ on VAL: +1.70%
+[PPO 1/7] Mean Reward vs CADJ: -0.073, VAL relative cost: +1.71%
+[PPO 2/7] Mean Reward vs CADJ: -0.071, VAL relative cost: +1.71%
+[PPO 3/7] Mean Reward vs CADJ: -0.270, VAL relative cost: +2.11%
+[PPO 4/7] Mean Reward vs CADJ: -0.070, VAL relative cost: +2.11%
+[PPO 5/7] Mean Reward vs CADJ: -0.041, VAL relative cost: +2.11%
+[PPO 6/7] Mean Reward vs CADJ: -0.140, VAL relative cost: +2.11%
+[PPO 7/7] Mean Reward vs CADJ: -0.094, VAL relative cost: +2.11%
+[Training Complete] Selected checkpoint best VAL rel.cost vs CADJ: +1.70%. Saved to ..\report_evidence\trained_medium_30_static.pt.
+{"success": true, "dagger_episodes": 6, "ppo_episodes": 21, "total_episodes": 27, "best_val_score_pct": 1.7, "weights_file": "..\\report_evidence\\trained_medium_30_static.pt"}
+[large_245_dynamic] training_seconds=11.365235599922016
+[DAgger] Beginning 2 DAgger iterations (3 episodes each)...
+[DAgger 1/2] Samples: 144, Cross-Entropy Loss: 0.3563
+[DAgger 2/2] Samples: 288, Cross-Entropy Loss: 0.0849
+[PPO] Initial BC policy relative cost vs CADJ on VAL: +29.90%
+[PPO 1/7] Mean Reward vs CADJ: -0.126, VAL relative cost: +19.90%
+[PPO 2/7] Mean Reward vs CADJ: -0.151, VAL relative cost: +19.90%
+[PPO 3/7] Mean Reward vs CADJ: -0.082, VAL relative cost: +19.25%
+[PPO 4/7] Mean Reward vs CADJ: -0.440, VAL relative cost: +19.25%
+[PPO 5/7] Mean Reward vs CADJ: -0.166, VAL relative cost: +18.75%
+[PPO 6/7] Mean Reward vs CADJ: -0.088, VAL relative cost: +18.61%
+[PPO 7/7] Mean Reward vs CADJ: -0.065, VAL relative cost: +18.61%
+[Training Complete] Selected checkpoint best VAL rel.cost vs CADJ: +18.61%. Saved to ..\report_evidence\trained_large_245_dynamic.pt.
+{"success": true, "dagger_episodes": 6, "ppo_episodes": 21, "total_episodes": 27, "best_val_score_pct": 18.61, "weights_file": "..\\report_evidence\\trained_large_245_dynamic.pt"}

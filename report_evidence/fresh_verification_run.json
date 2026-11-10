@@ -1,0 +1,2180 @@
+{
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "config_checks": {
+    "negative_node_count": {
+      "http_status": 400,
+      "body": {
+        "detail": {
+          "errors": [
+            "Node count -1 is invalid. Minimum allowed is 1 node."
+          ],
+          "warnings": []
+        }
+      }
+    },
+    "unknown_topology": {
+      "http_status": 400,
+      "body": {
+        "detail": {
+          "errors": [
+            "Invalid topology 'unknown'. Supported topologies: ['random', 'scale_free', 'mesh', 'star', 'ring', 'line', 'grid']"
+          ],
+          "warnings": []
+        }
+      }
+    },
+    "invalid_density": {
+      "http_status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "metadata": {
+            "node_count": 10,
+            "link_count": 24,
+            "topology_type": "random",
+            "density": "tiny",
+            "seed": 42,
+            "is_connected": true,
+            "is_single_node": false,
+            "connected_components": 1,
+            "average_degree": 4.8
+          },
+          "nodes": [
+            {
+              "id": 0,
+              "label": "Node 0",
+              "x": 531.6,
+              "y": 500.13,
+              "degree": 9
+            },
+            {
+              "id": 1,
+              "label": "Node 1",
+              "x": 386.88,
+              "y": 920.0,
+              "degree": 3
+            },
+            {
+              "id": 2,
+              "label": "Node 2",
+              "x": 719.49,
+              "y": 107.78,
+              "degree": 3
+            },
+            {
+              "id": 3,
+              "label": "Node 3",
+              "x": 261.97,
+              "y": 491.78,
+              "degree": 5
+            },
+            {
+              "id": 4,
+              "label": "Node 4",
+              "x": 863.22,
+              "y": 644.51,
+              "degree": 3
+            },
+            {
+              "id": 5,
+              "label": "Node 5",
+              "x": 508.42,
+              "y": 689.28,
+              "degree": 6
+            },
+            {
+              "id": 6,
+              "label": "Node 6",
+              "x": 498.37,
+              "y": 290.72,
+              "degree": 6
+            },
+            {
+              "id": 7,
+              "label": "Node 7",
+              "x": 211.57,
+              "y": 694.37,
+              "degree": 5
+            },
+            {
+              "id": 8,
+              "label": "Node 8",
+              "x": 176.3,
+              "y": 326.6,
+              "degree": 4
+            },
+            {
+              "id": 9,
+              "label": "Node 9",
+              "x": 842.16,
+              "y": 334.82,
+              "degree": 4
+            }
+          ],
+          "links": [
+            {
+              "id": "0-1",
+              "source": 0,
+              "target": 1,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 12.41,
+              "current_delay_ms": 12.41,
+              "utilization": 0.198,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 12.41,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-2",
+              "source": 0,
+              "target": 2,
+              "capacity_mbps": 250.0,
+              "base_delay_ms": 6.3,
+              "current_delay_ms": 6.3,
+              "utilization": 0.197,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 6.3,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-3",
+              "source": 0,
+              "target": 3,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 12.99,
+              "current_delay_ms": 12.99,
+              "utilization": 0.168,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 12.99,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-4",
+              "source": 0,
+              "target": 4,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 2.99,
+              "current_delay_ms": 2.99,
+              "utilization": 0.094,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 2.99,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-5",
+              "source": 0,
+              "target": 5,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 10.33,
+              "current_delay_ms": 10.33,
+              "utilization": 0.162,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 10.33,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-6",
+              "source": 0,
+              "target": 6,
+              "capacity_mbps": 1000.0,
+              "base_delay_ms": 13.6,
+              "current_delay_ms": 13.6,
+              "utilization": 0.094,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 13.6,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-7",
+              "source": 0,
+              "target": 7,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 11.63,
+              "current_delay_ms": 11.63,
+              "utilization": 0.202,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 11.63,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-8",
+              "source": 0,
+              "target": 8,
+              "capacity_mbps": 1000.0,
+              "base_delay_ms": 4.97,
+              "current_delay_ms": 4.97,
+              "utilization": 0.118,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 4.97,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "0-9",
+              "source": 0,
+              "target": 9,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 4.91,
+              "current_delay_ms": 4.91,
+              "utilization": 0.07,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 4.91,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "1-5",
+              "source": 1,
+              "target": 5,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 8.39,
+              "current_delay_ms": 8.39,
+              "utilization": 0.219,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 8.39,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "1-7",
+              "source": 1,
+              "target": 7,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 11.86,
+              "current_delay_ms": 11.86,
+              "utilization": 0.196,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 11.86,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "2-6",
+              "source": 2,
+              "target": 6,
+              "capacity_mbps": 1000.0,
+              "base_delay_ms": 10.81,
+              "current_delay_ms": 10.81,
+              "utilization": 0.066,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 10.81,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "2-9",
+              "source": 2,
+              "target": 9,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 7.04,
+              "current_delay_ms": 7.04,
+              "utilization": 0.165,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 7.04,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "3-5",
+              "source": 3,
+              "target": 5,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 13.42,
+              "current_delay_ms": 13.42,
+              "utilization": 0.182,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 13.42,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "3-6",
+              "source": 3,
+              "target": 6,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 14.48,
+              "current_delay_ms": 14.48,
+              "utilization": 0.221,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 14.48,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "3-7",
+              "source": 3,
+              "target": 7,
+              "capacity_mbps": 1000.0,
+              "base_delay_ms": 15.93,
+              "current_delay_ms": 15.93,
+              "utilization": 0.106,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 15.93,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "3-8",
+              "source": 3,
+              "target": 8,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 12.35,
+              "current_delay_ms": 12.35,
+              "utilization": 0.083,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 12.35,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "4-5",
+              "source": 4,
+              "target": 5,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 8.01,
+              "current_delay_ms": 8.01,
+              "utilization": 0.19,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 8.01,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "4-9",
+              "source": 4,
+              "target": 9,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 13.09,
+              "current_delay_ms": 13.09,
+              "utilization": 0.172,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 13.09,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "5-6",
+              "source": 5,
+              "target": 6,
+              "capacity_mbps": 250.0,
+              "base_delay_ms": 5.15,
+              "current_delay_ms": 5.15,
+              "utilization": 0.083,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 5.15,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "5-7",
+              "source": 5,
+              "target": 7,
+              "capacity_mbps": 250.0,
+              "base_delay_ms": 8.38,
+              "current_delay_ms": 8.38,
+              "utilization": 0.187,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 8.38,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "6-8",
+              "source": 6,
+              "target": 8,
+              "capacity_mbps": 100.0,
+              "base_delay_ms": 15.56,
+              "current_delay_ms": 15.56,
+              "utilization": 0.096,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 15.56,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "6-9",
+              "source": 6,
+              "target": 9,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 3.0,
+              "current_delay_ms": 3.0,
+              "utilization": 0.13,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 3.0,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            },
+            {
+              "id": "7-8",
+              "source": 7,
+              "target": 8,
+              "capacity_mbps": 500.0,
+              "base_delay_ms": 3.53,
+              "current_delay_ms": 3.53,
+              "utilization": 0.093,
+              "status": "active",
+              "loss_prob": 0.001,
+              "weight": 3.53,
+              "queue_occupancy": 0,
+              "packets_transmitted": 0,
+              "packets_dropped": 0
+            }
+          ]
+        },
+        "warnings": [
+          "Unknown density 'tiny'. Defaulting to 'medium'."
+        ]
+      }
+    },
+    "same_endpoints": {
+      "http_status": 400,
+      "body": {
+        "detail": {
+          "errors": [
+            "Source and destination must be distinct endpoints. Both set to 2."
+          ]
+        }
+      }
+    },
+    "source_out_of_range": {
+      "http_status": 400,
+      "body": {
+        "detail": {
+          "errors": [
+            "Source node 5 does not exist in the generated network."
+          ]
+        }
+      }
+    },
+    "destination_out_of_range": {
+      "http_status": 400,
+      "body": {
+        "detail": {
+          "errors": [
+            "Destination node 5 does not exist in the generated network."
+          ]
+        }
+      }
+    },
+    "unreachable_pair": {
+      "http_status": 200,
+      "body": {
+        "valid": false,
+        "is_single_node": false,
+        "errors": [
+          "Destination node 3 is unreachable from source node 0. The network contains 2 disconnected components."
+        ],
+        "warnings": [],
+        "details": {
+          "path_exists": false,
+          "is_connected": false,
+          "connected_components": 2,
+          "node_count": 4,
+          "active_link_count": 2
+        }
+      }
+    },
+    "topology_245_seed_42": {
+      "node_count": 245,
+      "link_count": 2352,
+      "metadata": {
+        "node_count": 245,
+        "link_count": 2352,
+        "topology_type": "random",
+        "density": "high",
+        "seed": 42,
+        "is_connected": true,
+        "is_single_node": false,
+        "connected_components": 1,
+        "average_degree": 19.2
+      }
+    },
+    "dynamic_conditions_run": {
+      "failure_schedule": {
+        "3": {
+          "action": "fail",
+          "link_id": "1-5"
+        },
+        "7": {
+          "action": "recover",
+          "link_id": "1-5"
+        }
+      },
+      "event_types": [
+        "LINK_FAILED",
+        "LINK_RECOVERED",
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED",
+        "TRAFFIC_BURST"
+      ],
+      "dynamic_events": [
+        {
+          "step": 3,
+          "timestamp_ms": 1794249797465.2,
+          "type": "LINK_FAILED",
+          "details": {
+            "link_id": "1-5",
+            "source": 1,
+            "target": 5,
+            "reason": "Dynamic link fault injected"
+          }
+        },
+        {
+          "step": 7,
+          "timestamp_ms": 1794249797535.4,
+          "type": "LINK_RECOVERED",
+          "details": {
+            "link_id": "1-5",
+            "source": 1,
+            "target": 5
+          }
+        }
+      ],
+      "simulation_completed": true,
+      "steps": 12,
+      "utilization_snapshots": 12
+    },
+    "small_5_static_first_run": {
+      "node_count": 5,
+      "link_count": 5,
+      "traditional_path": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "rl_path": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "traditional_events": [
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED"
+      ],
+      "rl_events": [
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED"
+      ],
+      "pair_wall_seconds": 0.21368209994398057,
+      "peak_traced_memory_bytes": null
+    },
+    "medium_30_static_first_run": {
+      "node_count": 30,
+      "link_count": 104,
+      "traditional_path": [
+        1,
+        5,
+        20
+      ],
+      "rl_path": [
+        1,
+        5,
+        20
+      ],
+      "traditional_events": [
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED"
+      ],
+      "rl_events": [
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED"
+      ],
+      "pair_wall_seconds": 0.18178179999813437,
+      "peak_traced_memory_bytes": null
+    },
+    "large_245_dynamic_first_run": {
+      "node_count": 245,
+      "link_count": 2352,
+      "traditional_path": [
+        1,
+        57,
+        19,
+        50
+      ],
+      "rl_path": [
+        1,
+        37,
+        50
+      ],
+      "traditional_events": [
+        "LINK_FAILED",
+        "LINK_RECOVERED",
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED",
+        "TRAFFIC_BURST"
+      ],
+      "rl_events": [
+        "LINK_FAILED",
+        "LINK_RECOVERED",
+        "SIMULATION_COMPLETED",
+        "SIMULATION_INITIALIZED",
+        "TRAFFIC_BURST"
+      ],
+      "pair_wall_seconds": 7.2936271000653505,
+      "peak_traced_memory_bytes": 18392682
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "key": "small_5_static",
+        "label": "Small 5-node custom demo, static, constant traffic",
+        "topology": "demo",
+        "n": 5,
+        "density": "medium",
+        "source": 0,
+        "destination": 4,
+        "traffic": "constant",
+        "dynamic": false,
+        "steps": 10,
+        "train_seed": 42
+      },
+      "seeds": [
+        {
+          "seed": 42,
+          "topology_counts": {
+            "nodes": 5,
+            "links": 5
+          },
+          "traditional": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 24993,
+              "packets_delivered": 24993,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4998.6,
+              "throughput_mbps": 59.983,
+              "avg_latency_ms": 12.24,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 10.53,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 10.98,
+              "max_link_utilization_pct": 39.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.094,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 24993,
+              "packets_delivered": 24993,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4998.6,
+              "throughput_mbps": 59.983,
+              "avg_latency_ms": 12.63,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 12.63,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 5.18,
+              "max_link_utilization_pct": 5.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 1.488,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.21368209994398057,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 43,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 25002,
+              "packets_delivered": 25002,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5000.4,
+              "throughput_mbps": 60.005,
+              "avg_latency_ms": 12.24,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 10.53,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 10.99,
+              "max_link_utilization_pct": 39.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.0825,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 25002,
+              "packets_delivered": 25002,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5000.4,
+              "throughput_mbps": 60.005,
+              "avg_latency_ms": 12.63,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 12.63,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 5.18,
+              "max_link_utilization_pct": 5.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.9849,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.20202689990401268,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 44,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 24999,
+              "packets_delivered": 24999,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.8,
+              "throughput_mbps": 59.998,
+              "avg_latency_ms": 12.24,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 10.53,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 10.99,
+              "max_link_utilization_pct": 39.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.0667,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 24999,
+              "packets_delivered": 24999,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.8,
+              "throughput_mbps": 59.998,
+              "avg_latency_ms": 12.63,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 12.63,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 5.18,
+              "max_link_utilization_pct": 5.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.8712,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.1849572998471558,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 45,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 24997,
+              "packets_delivered": 24997,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.4,
+              "throughput_mbps": 59.993,
+              "avg_latency_ms": 12.24,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 10.53,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 10.99,
+              "max_link_utilization_pct": 39.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.0651,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 24997,
+              "packets_delivered": 24997,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.4,
+              "throughput_mbps": 59.993,
+              "avg_latency_ms": 12.63,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 12.63,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 5.18,
+              "max_link_utilization_pct": 5.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.8243,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.17632539989426732,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 46,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 25005,
+              "packets_delivered": 25005,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5001.0,
+              "throughput_mbps": 60.012,
+              "avg_latency_ms": 12.24,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 10.53,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 10.99,
+              "max_link_utilization_pct": 39.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.0633,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "metrics": {
+              "packets_offered": 25005,
+              "packets_delivered": 25005,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5001.0,
+              "throughput_mbps": 60.012,
+              "avg_latency_ms": 12.63,
+              "p95_latency_ms": 12.63,
+              "min_latency_ms": 12.63,
+              "max_latency_ms": 12.63,
+              "avg_link_utilization_pct": 5.18,
+              "max_link_utilization_pct": 5.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.976,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.18305470002815127,
+          "peak_traced_memory_bytes": null
+        }
+      ],
+      "training": {
+        "training_seconds": 9.528111699968576,
+        "settings": {
+          "episodes_requested": 30,
+          "dagger_iters": 2,
+          "dagger_episodes": 6,
+          "ppo_iters": 7,
+          "ppo_episodes": 21,
+          "validation_scenarios": 8,
+          "seed": 42
+        },
+        "result": {
+          "success": true,
+          "dagger_episodes": 6,
+          "ppo_episodes": 21,
+          "total_episodes": 27,
+          "best_val_score_pct": 2.74,
+          "weights_file": "..\\report_evidence\\trained_small_5_static.pt"
+        },
+        "checkpoint": {
+          "path": "C:\\Users\\Madhuri\\Downloads\\NETRA_reviewed\\NETRA_reviewed\\report_evidence\\trained_small_5_static.pt",
+          "size_bytes": 42101
+        }
+      }
+    },
+    {
+      "scenario": {
+        "key": "medium_30_static",
+        "label": "Medium 30-node random, moderate constant traffic, static",
+        "topology": "random",
+        "n": 30,
+        "density": "medium",
+        "source": 1,
+        "destination": 20,
+        "traffic": "constant",
+        "dynamic": false,
+        "steps": 10,
+        "train_seed": 43
+      },
+      "seeds": [
+        {
+          "seed": 42,
+          "topology_counts": {
+            "nodes": 30,
+            "links": 104
+          },
+          "traditional": {
+            "path": [
+              1,
+              5,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 24993,
+              "packets_delivered": 24993,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4998.6,
+              "throughput_mbps": 59.983,
+              "avg_latency_ms": 18.95,
+              "p95_latency_ms": 20.14,
+              "min_latency_ms": 16.57,
+              "max_latency_ms": 20.14,
+              "avg_link_utilization_pct": 10.65,
+              "max_link_utilization_pct": 49.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.3635,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              5,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 24993,
+              "packets_delivered": 24993,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4998.6,
+              "throughput_mbps": 59.983,
+              "avg_latency_ms": 19.06,
+              "p95_latency_ms": 20.35,
+              "min_latency_ms": 16.57,
+              "max_latency_ms": 20.35,
+              "avg_link_utilization_pct": 10.63,
+              "max_link_utilization_pct": 50.1,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 2.0333,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.18178179999813437,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 43,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              10,
+              17,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 25002,
+              "packets_delivered": 25002,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5000.4,
+              "throughput_mbps": 60.005,
+              "avg_latency_ms": 19.85,
+              "p95_latency_ms": 20.11,
+              "min_latency_ms": 19.15,
+              "max_latency_ms": 20.11,
+              "avg_link_utilization_pct": 10.33,
+              "max_link_utilization_pct": 36.3,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.3558,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              0,
+              8,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 25002,
+              "packets_delivered": 25002,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5000.4,
+              "throughput_mbps": 60.005,
+              "avg_latency_ms": 21.05,
+              "p95_latency_ms": 21.83,
+              "min_latency_ms": 20.8,
+              "max_latency_ms": 21.83,
+              "avg_link_utilization_pct": 9.95,
+              "max_link_utilization_pct": 24.9,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 1.9035,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.23892019991762936,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 44,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              6,
+              7,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 24999,
+              "packets_delivered": 24999,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.8,
+              "throughput_mbps": 59.998,
+              "avg_latency_ms": 23.64,
+              "p95_latency_ms": 24.55,
+              "min_latency_ms": 21.43,
+              "max_latency_ms": 24.55,
+              "avg_link_utilization_pct": 10.18,
+              "max_link_utilization_pct": 43.5,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.2653,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              0,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 24999,
+              "packets_delivered": 24999,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.8,
+              "throughput_mbps": 59.998,
+              "avg_latency_ms": 24.86,
+              "p95_latency_ms": 26.61,
+              "min_latency_ms": 21.43,
+              "max_latency_ms": 26.61,
+              "avg_link_utilization_pct": 10.0,
+              "max_link_utilization_pct": 50.1,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 1.6477,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.18079710006713867,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 45,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              0,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 24997,
+              "packets_delivered": 24997,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.4,
+              "throughput_mbps": 59.993,
+              "avg_latency_ms": 16.61,
+              "p95_latency_ms": 17.16,
+              "min_latency_ms": 16.45,
+              "max_latency_ms": 17.16,
+              "avg_link_utilization_pct": 10.78,
+              "max_link_utilization_pct": 24.9,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.2901,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              0,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 24997,
+              "packets_delivered": 24997,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 4999.4,
+              "throughput_mbps": 59.993,
+              "avg_latency_ms": 16.61,
+              "p95_latency_ms": 17.16,
+              "min_latency_ms": 16.45,
+              "max_latency_ms": 17.16,
+              "avg_link_utilization_pct": 10.78,
+              "max_link_utilization_pct": 24.9,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 1.419,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.17213599989190698,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 46,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              5,
+              15,
+              16,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 25005,
+              "packets_delivered": 25005,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5001.0,
+              "throughput_mbps": 60.012,
+              "avg_latency_ms": 17.68,
+              "p95_latency_ms": 18.25,
+              "min_latency_ms": 17.5,
+              "max_latency_ms": 18.25,
+              "avg_link_utilization_pct": 9.8,
+              "max_link_utilization_pct": 24.9,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 0.2742,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              0,
+              20
+            ],
+            "metrics": {
+              "packets_offered": 25005,
+              "packets_delivered": 25005,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5001.0,
+              "throughput_mbps": 60.012,
+              "avg_latency_ms": 35.14,
+              "p95_latency_ms": 35.74,
+              "min_latency_ms": 34.96,
+              "max_latency_ms": 35.74,
+              "avg_link_utilization_pct": 9.87,
+              "max_link_utilization_pct": 24.9,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 1.4547,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.19530170015059412,
+          "peak_traced_memory_bytes": null
+        }
+      ],
+      "training": {
+        "training_seconds": 11.331776200095192,
+        "settings": {
+          "episodes_requested": 30,
+          "dagger_iters": 2,
+          "dagger_episodes": 6,
+          "ppo_iters": 7,
+          "ppo_episodes": 21,
+          "validation_scenarios": 8,
+          "seed": 43
+        },
+        "result": {
+          "success": true,
+          "dagger_episodes": 6,
+          "ppo_episodes": 21,
+          "total_episodes": 27,
+          "best_val_score_pct": 1.7,
+          "weights_file": "..\\report_evidence\\trained_medium_30_static.pt"
+        },
+        "checkpoint": {
+          "path": "C:\\Users\\Madhuri\\Downloads\\NETRA_reviewed\\NETRA_reviewed\\report_evidence\\trained_medium_30_static.pt",
+          "size_bytes": 42133
+        }
+      }
+    },
+    {
+      "scenario": {
+        "key": "large_245_dynamic",
+        "label": "Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",
+        "topology": "random",
+        "n": 245,
+        "density": "high",
+        "source": 1,
+        "destination": 50,
+        "traffic": "mixed",
+        "dynamic": true,
+        "steps": 10,
+        "train_seed": 44
+      },
+      "seeds": [
+        {
+          "seed": 42,
+          "topology_counts": {
+            "nodes": 245,
+            "links": 2352
+          },
+          "traditional": {
+            "path": [
+              1,
+              57,
+              19,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 29672,
+              "packets_delivered": 26325,
+              "packets_dropped": 3347,
+              "delivery_success_rate_pct": 88.72,
+              "packet_loss_pct": 11.28,
+              "throughput_pps": 5265.0,
+              "throughput_mbps": 63.18,
+              "avg_latency_ms": 19.0,
+              "p95_latency_ms": 22.2,
+              "min_latency_ms": 15.67,
+              "max_latency_ms": 22.2,
+              "avg_link_utilization_pct": 10.68,
+              "max_link_utilization_pct": 50.0,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 17.7873,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              37,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 29672,
+              "packets_delivered": 29672,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 5934.4,
+              "throughput_mbps": 71.213,
+              "avg_latency_ms": 26.54,
+              "p95_latency_ms": 31.14,
+              "min_latency_ms": 24.31,
+              "max_latency_ms": 31.14,
+              "avg_link_utilization_pct": 10.64,
+              "max_link_utilization_pct": 37.9,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 55.8088,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 7.2936271000653505,
+          "peak_traced_memory_bytes": 18392682
+        },
+        {
+          "seed": 43,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              14,
+              0,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 52704,
+              "packets_delivered": 49088,
+              "packets_dropped": 3616,
+              "delivery_success_rate_pct": 93.14,
+              "packet_loss_pct": 6.86,
+              "throughput_pps": 9817.6,
+              "throughput_mbps": 117.811,
+              "avg_latency_ms": 15.19,
+              "p95_latency_ms": 16.08,
+              "min_latency_ms": 14.23,
+              "max_latency_ms": 16.08,
+              "avg_link_utilization_pct": 10.73,
+              "max_link_utilization_pct": 52.5,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 3.987,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "TRAFFIC_BURST",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              8,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 52704,
+              "packets_delivered": 44500,
+              "packets_dropped": 8204,
+              "delivery_success_rate_pct": 84.43,
+              "packet_loss_pct": 15.57,
+              "throughput_pps": 8900.0,
+              "throughput_mbps": 106.8,
+              "avg_latency_ms": 16.95,
+              "p95_latency_ms": 19.79,
+              "min_latency_ms": 14.78,
+              "max_latency_ms": 19.79,
+              "avg_link_utilization_pct": 10.73,
+              "max_link_utilization_pct": 65.1,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 6.0934,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "TRAFFIC_BURST",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.4189039000775665,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 44,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              0,
+              58,
+              85,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 44807,
+              "packets_delivered": 34845,
+              "packets_dropped": 9962,
+              "delivery_success_rate_pct": 77.77,
+              "packet_loss_pct": 22.23,
+              "throughput_pps": 6969.0,
+              "throughput_mbps": 83.628,
+              "avg_latency_ms": 18.58,
+              "p95_latency_ms": 19.13,
+              "min_latency_ms": 17.54,
+              "max_latency_ms": 19.13,
+              "avg_link_utilization_pct": 10.8,
+              "max_link_utilization_pct": 37.7,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 4.0972,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              97,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 44807,
+              "packets_delivered": 44807,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 8961.4,
+              "throughput_mbps": 107.537,
+              "avg_latency_ms": 31.64,
+              "p95_latency_ms": 35.18,
+              "min_latency_ms": 29.81,
+              "max_latency_ms": 35.18,
+              "avg_link_utilization_pct": 10.76,
+              "max_link_utilization_pct": 33.8,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 7.4243,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.41503809997811913,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 45,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              93,
+              72,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 39746,
+              "packets_delivered": 29791,
+              "packets_dropped": 9955,
+              "delivery_success_rate_pct": 74.95,
+              "packet_loss_pct": 25.05,
+              "throughput_pps": 5958.2,
+              "throughput_mbps": 71.498,
+              "avg_latency_ms": 17.84,
+              "p95_latency_ms": 19.35,
+              "min_latency_ms": 15.72,
+              "max_latency_ms": 19.35,
+              "avg_link_utilization_pct": 10.77,
+              "max_link_utilization_pct": 49.1,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 4.0175,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              0,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 39746,
+              "packets_delivered": 29541,
+              "packets_dropped": 10205,
+              "delivery_success_rate_pct": 74.32,
+              "packet_loss_pct": 25.68,
+              "throughput_pps": 5908.2,
+              "throughput_mbps": 70.898,
+              "avg_latency_ms": 40.84,
+              "p95_latency_ms": 53.23,
+              "min_latency_ms": 30.52,
+              "max_latency_ms": 53.23,
+              "avg_link_utilization_pct": 10.71,
+              "max_link_utilization_pct": 72.7,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 7.0767,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.35436650016345084,
+          "peak_traced_memory_bytes": null
+        },
+        {
+          "seed": 46,
+          "topology_counts": null,
+          "traditional": {
+            "path": [
+              1,
+              0,
+              9,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 41951,
+              "packets_delivered": 38192,
+              "packets_dropped": 3759,
+              "delivery_success_rate_pct": 91.04,
+              "packet_loss_pct": 8.96,
+              "throughput_pps": 7638.4,
+              "throughput_mbps": 91.661,
+              "avg_latency_ms": 12.49,
+              "p95_latency_ms": 13.01,
+              "min_latency_ms": 12.08,
+              "max_latency_ms": 13.29,
+              "avg_link_utilization_pct": 10.69,
+              "max_link_utilization_pct": 40.6,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 3.8352,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "TRAFFIC_BURST",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "rl": {
+            "path": [
+              1,
+              50
+            ],
+            "metrics": {
+              "packets_offered": 41951,
+              "packets_delivered": 41951,
+              "packets_dropped": 0,
+              "delivery_success_rate_pct": 100.0,
+              "packet_loss_pct": 0.0,
+              "throughput_pps": 8390.2,
+              "throughput_mbps": 100.682,
+              "avg_latency_ms": 21.94,
+              "p95_latency_ms": 28.3,
+              "min_latency_ms": 17.48,
+              "max_latency_ms": 28.3,
+              "avg_link_utilization_pct": 10.67,
+              "max_link_utilization_pct": 50.0,
+              "congestion_frequency_pct": 0.0,
+              "routing_computation_time_ms": 7.3242,
+              "rl_reward": null
+            },
+            "events": [
+              "SIMULATION_INITIALIZED",
+              "LINK_FAILED",
+              "TRAFFIC_BURST",
+              "TRAFFIC_BURST",
+              "LINK_RECOVERED",
+              "TRAFFIC_BURST",
+              "SIMULATION_COMPLETED"
+            ]
+          },
+          "independent": {
+            "simulators_are_distinct": true,
+            "network_data_are_distinct": true,
+            "links_are_distinct": true
+          },
+          "pair_wall_seconds": 0.3721144001465291,
+          "peak_traced_memory_bytes": null
+        }
+      ],
+      "training": {
+        "training_seconds": 11.365235599922016,
+        "settings": {
+          "episodes_requested": 30,
+          "dagger_iters": 2,
+          "dagger_episodes": 6,
+          "ppo_iters": 7,
+          "ppo_episodes": 21,
+          "validation_scenarios": 8,
+          "seed": 44
+        },
+        "result": {
+          "success": true,
+          "dagger_episodes": 6,
+          "ppo_episodes": 21,
+          "total_episodes": 27,
+          "best_val_score_pct": 18.61,
+          "weights_file": "..\\report_evidence\\trained_large_245_dynamic.pt"
+        },
+        "checkpoint": {
+          "path": "C:\\Users\\Madhuri\\Downloads\\NETRA_reviewed\\NETRA_reviewed\\report_evidence\\trained_large_245_dynamic.pt",
+          "size_bytes": 42149
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "scenario": "Small 5-node custom demo, static, constant traffic",
+      "metric": "Latency (ms)",
+      "traditional": {
+        "mean": 12.24,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "rl": {
+        "mean": 12.63,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": 3.1862745098039262,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Small 5-node custom demo, static, constant traffic",
+      "metric": "Packet loss (%)",
+      "traditional": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "rl": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": null,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Small 5-node custom demo, static, constant traffic",
+      "metric": "Throughput (Mbps)",
+      "traditional": {
+        "mean": 59.9982,
+        "sample_sd": 0.011122050170720751,
+        "n": 5
+      },
+      "rl": {
+        "mean": 59.9982,
+        "sample_sd": 0.011122050170720751,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": 0.0,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Small 5-node custom demo, static, constant traffic",
+      "metric": "Mean link utilization (%)",
+      "traditional": {
+        "mean": 10.988,
+        "sample_sd": 0.004472135954999484,
+        "n": 5
+      },
+      "rl": {
+        "mean": 5.18,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": -52.85766290498726,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Medium 30-node random, moderate constant traffic, static",
+      "metric": "Latency (ms)",
+      "traditional": {
+        "mean": 19.346,
+        "sample_sd": 2.697708286675934,
+        "n": 5
+      },
+      "rl": {
+        "mean": 23.344,
+        "sample_sd": 7.2526843306461375,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": 20.665770701953896,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Medium 30-node random, moderate constant traffic, static",
+      "metric": "Packet loss (%)",
+      "traditional": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "rl": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": null,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Medium 30-node random, moderate constant traffic, static",
+      "metric": "Throughput (Mbps)",
+      "traditional": {
+        "mean": 59.9982,
+        "sample_sd": 0.011122050170720751,
+        "n": 5
+      },
+      "rl": {
+        "mean": 59.9982,
+        "sample_sd": 0.011122050170720751,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": 0.0,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Medium 30-node random, moderate constant traffic, static",
+      "metric": "Mean link utilization (%)",
+      "traditional": {
+        "mean": 10.348,
+        "sample_sd": 0.3894483277663415,
+        "n": 5
+      },
+      "rl": {
+        "mean": 10.246,
+        "sample_sd": 0.4248882205945468,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": -0.9856977193660641,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",
+      "metric": "Latency (ms)",
+      "traditional": {
+        "mean": 16.62,
+        "sample_sd": 2.7430001822821666,
+        "n": 5
+      },
+      "rl": {
+        "mean": 27.582,
+        "sample_sd": 9.195097606877265,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": 65.95667870036101,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",
+      "metric": "Packet loss (%)",
+      "traditional": {
+        "mean": 14.876000000000001,
+        "sample_sd": 8.212461872057611,
+        "n": 5
+      },
+      "rl": {
+        "mean": 8.25,
+        "sample_sd": 11.848784747812747,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": -44.541543425652065,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",
+      "metric": "Throughput (Mbps)",
+      "traditional": {
+        "mean": 85.5556,
+        "sample_sd": 21.09316224040388,
+        "n": 5
+      },
+      "rl": {
+        "mean": 91.426,
+        "sample_sd": 18.78537919500163,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": 6.861502929089392,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "scenario": "Large 245-node random/high density, source 1 to 50, mixed, dynamic ON",
+      "metric": "Mean link utilization (%)",
+      "traditional": {
+        "mean": 10.734,
+        "sample_sd": 0.05128352561983267,
+        "n": 5
+      },
+      "rl": {
+        "mean": 10.702,
+        "sample_sd": 0.04764451699828624,
+        "n": 5
+      },
+      "difference_pct_rl_minus_trad": -0.2981181293087388,
+      "seeds_used": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    }
+  ]
+}
